@@ -1,141 +1,381 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GI Volume Intolerance | Community & Resources</title>
+    <title>GI Volume Intolerance | Understanding the Role of Gastrointestinal Volume</title>
 
-    <meta name="description" content="A community and resource hub for people experiencing gastrointestinal volume intolerance, unexplained nausea, abdominal pain and difficulty tolerating food or fluids.">
+    <meta name="description" content="A patient-led project exploring GI volume intolerance, gastrointestinal volume, visceral hypersensitivity, nausea, abdominal pain and related symptoms.">
 
     <style>
+        :root {
+            --cream: #f8f6f2;
+            --navy: #112b3b;
+            --red: #942e1f;
+            --light-border: #ddd8d1;
+            --muted: #5d6870;
+            --white: #ffffff;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f6f2;
-            color: #112b3b;
-            line-height: 1.6;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--navy);
+            line-height: 1.7;
+        }
+
+        /* ---------- HEADER ---------- */
+
         header {
-            padding: 25px 8%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 28px 35px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ddd8d1;
         }
 
         .logo {
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.05rem;
+            font-weight: 650;
+            letter-spacing: -0.01em;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
         }
 
         nav a {
-            margin-left: 25px;
+            color: var(--navy);
             text-decoration: none;
-            color: #112b3b;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: var(--red);
         }
 
-        .hero {
+        /* ---------- GENERAL ---------- */
+
+        .container {
             max-width: 900px;
-            margin: 100px auto;
-            padding: 0 25px;
-            text-align: center;
+            margin: 0 auto;
+            padding: 0 35px;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            line-height: 1.05;
+        .section {
+            padding: 95px 0;
+        }
+
+        .section + .section {
+            border-top: 1px solid var(--light-border);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
             margin-bottom: 25px;
         }
 
-        .hero p {
-            max-width: 650px;
-            margin: 0 auto 35px;
-            font-size: 1.2rem;
+        p {
+            margin-bottom: 20px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            padding: 120px 35px 115px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--red);
+            font-size: 0.82rem;
+            font-weight: 650;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.4rem);
+            max-width: 850px;
+            margin-bottom: 30px;
+        }
+
+        .hero-lead {
+            font-size: 1.3rem;
+            max-width: 720px;
+            color: var(--muted);
+        }
+
+        /* ---------- INTRO ---------- */
+
+        .intro {
+            font-size: 1.15rem;
+            max-width: 780px;
+        }
+
+        .volume-question {
+            margin: 45px 0;
+            padding: 32px 35px;
+            border-left: 4px solid var(--red);
+            background: rgba(255, 255, 255, 0.45);
+        }
+
+        .volume-question p {
+            font-size: 1.45rem;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .emphasis {
+            font-weight: 650;
+        }
+
+        /* ---------- SYMPTOMS ---------- */
+
+        .symptoms {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px 45px;
+            margin: 30px 0 35px;
+            list-style: none;
+        }
+
+        .symptoms li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-border);
+        }
+
+        .symptoms li::before {
+            content: "—";
+            color: var(--red);
+            margin-right: 10px;
+        }
+
+        /* ---------- MECHANISM ---------- */
+
+        .mechanism {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .mechanism .container {
+            max-width: 900px;
+        }
+
+        .mechanism .eyebrow {
+            color: #d9aaa2;
+        }
+
+        .mechanism p {
+            color: #e7e4df;
+        }
+
+        .mechanism-note {
+            margin-top: 35px;
+            padding: 25px 28px;
+            border: 1px solid rgba(248, 246, 242, 0.25);
+            font-size: 0.95rem;
+        }
+
+        /* ---------- WHO ---------- */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .info-card {
+            padding: 30px;
+            background: var(--white);
+            border: 1px solid var(--light-border);
+            border-radius: 4px;
+        }
+
+        .info-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+        }
+
+        .info-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* ---------- COMMUNITY ---------- */
+
+        .community-intro {
+            font-size: 1.15rem;
+            max-width: 780px;
+        }
+
+        .question {
+            font-size: 1.7rem;
+            line-height: 1.4;
+            margin: 45px 0 35px;
+            font-weight: 550;
+        }
+
+        .areas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            margin: 40px 0;
+            border-top: 1px solid var(--light-border);
+        }
+
+        .area {
+            padding: 24px 20px 24px 0;
+            border-bottom: 1px solid var(--light-border);
+        }
+
+        .area strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .area span {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .closing {
+            margin-top: 45px;
+            font-size: 1.1rem;
+        }
+
+        /* ---------- CTA ---------- */
+
+        .cta {
+            text-align: center;
+            padding: 100px 35px;
+            border-top: 1px solid var(--light-border);
+        }
+
+        .cta h2 {
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--muted);
         }
 
         .button {
             display: inline-block;
-            background: #942e1f;
+            background: var(--red);
             color: white;
-            padding: 14px 28px;
-            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            padding: 13px 26px;
+            border-radius: 3px;
+            font-weight: 600;
         }
 
         .button:hover {
-            opacity: 0.85;
+            opacity: 0.88;
         }
 
-        section {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 0 25px;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            max-width: 700px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #e2ddd6;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
+        /* ---------- FOOTER ---------- */
 
         footer {
+            border-top: 1px solid var(--light-border);
+            padding: 35px;
             text-align: center;
-            padding: 40px 25px;
-            margin-top: 100px;
-            border-top: 1px solid #ddd8d1;
-            font-size: 0.9rem;
+            color: var(--muted);
+            font-size: 0.85rem;
         }
 
-        @media (max-width: 600px) {
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 700px) {
+
             header {
+                padding: 22px 22px;
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav a {
-                margin: 0 8px;
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero {
-                margin: 70px auto;
+                padding: 80px 22px 75px;
+            }
+
+            .container {
+                padding: 0 22px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-lead {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            .symptoms,
+            .two-column,
+            .areas {
+                grid-template-columns: 1fr;
+            }
+
+            .volume-question {
+                padding: 25px 22px;
+            }
+
+            .volume-question p {
+                font-size: 1.2rem;
+            }
+
+            .question {
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
+
 
 <body>
 
@@ -143,8 +383,8 @@
     <div class="logo">GI Volume Intolerance</div>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#resources">Resources</a>
+        <a href="#understanding">Understanding</a>
+        <a href="#mechanism">Mechanism</a>
         <a href="#community">Community</a>
     </nav>
 </header>
@@ -152,87 +392,295 @@
 
 <main>
 
+    <!-- HERO -->
+
     <section class="hero">
+        <div class="eyebrow">A patient-led project</div>
+
         <h1>GI Volume Intolerance</h1>
 
-        <p>
-            A community for people whose gastrointestinal symptoms
-            make eating and drinking more difficult than they should be.
-        </p>
-
-        <a class="button" href="#community">
-            Find the community
-        </a>
-    </section>
-
-
-    <section id="about">
-        <h2>What is GI volume intolerance?</h2>
-
-        <p>
-            GI volume intolerance describes difficulty tolerating the
-            volume of food or fluid in the gastrointestinal tract.
-            For some people, even relatively small amounts can trigger
-            symptoms such as nausea, abdominal pain, pressure or discomfort.
-        </p>
-
-        <p style="margin-top: 20px;">
-            The term is not currently an established medical diagnosis.
-            This project aims to bring together people with similar
-            experiences and explore what we can learn from each other
-            and from existing research.
+        <p class="hero-lead">
+            Exploring the relationship between gastrointestinal volume
+            and symptoms such as nausea, abdominal pain and discomfort.
         </p>
     </section>
 
 
-    <section id="resources">
-        <h2>Explore the topic</h2>
+    <!-- UNDERSTANDING -->
 
-        <div class="cards">
+    <section class="section" id="understanding">
+        <div class="container">
 
-            <div class="card">
-                <h3>Symptoms</h3>
+            <div class="eyebrow">Understanding the concept</div>
+
+            <h2>What is GI volume intolerance?</h2>
+
+            <p class="intro">
+                GI volume intolerance is a term used here to describe a
+                pattern in which the physical volume of food or fluid
+                within the gastrointestinal tract appears to contribute
+                significantly to symptoms.
+            </p>
+
+            <p>
+                Eating and drinking naturally cause the stomach and
+                intestines to expand. Normally, this contributes to
+                sensations such as fullness and satiety. For some people,
+                however, relatively small volumes may be associated with
+                significant symptoms.
+            </p>
+
+            <ul class="symptoms">
+                <li>Nausea</li>
+                <li>Abdominal pain</li>
+                <li>Pressure or discomfort</li>
+                <li>Bloating</li>
+                <li>Early satiety</li>
+                <li>Other gastrointestinal symptoms</li>
+            </ul>
+
+            <p>
+                The important distinction is that symptoms may be
+                influenced not only by <span class="emphasis">what</span>
+                is consumed, but also by <span class="emphasis">how much
+                physical volume</span> is present in the gastrointestinal
+                tract.
+            </p>
+
+            <div class="volume-question">
                 <p>
-                    Learn about experiences people may have when
-                    gastrointestinal volume triggers symptoms.
+                    What if the problem isn't primarily
+                    <span class="emphasis">what</span> you eat —
+                    but <span class="emphasis">how much</span> physical
+                    volume enters your digestive system?
                 </p>
             </div>
 
-            <div class="card">
-                <h3>Research</h3>
-                <p>
-                    Explore research that may help us understand
-                    gastrointestinal sensitivity, volume and symptoms.
-                </p>
-            </div>
+            <p>
+                This concept may be particularly relevant when the
+                severity of symptoms appears disproportionate to the
+                amount consumed, or when dietary composition alone does
+                not adequately explain someone's experience.
+            </p>
 
-            <div class="card">
-                <h3>Tests & treatments</h3>
-                <p>
-                    A growing collection of information about tests,
-                    treatments and approaches people have explored.
-                </p>
+        </div>
+    </section>
+
+
+    <!-- MECHANISM -->
+
+    <section class="section mechanism" id="mechanism">
+        <div class="container">
+
+            <div class="eyebrow">Possible mechanisms</div>
+
+            <h2>Why might volume trigger symptoms?</h2>
+
+            <p>
+                One possible mechanism that may contribute to an increased
+                response to gastrointestinal volume is
+                <strong>visceral hypersensitivity</strong>.
+            </p>
+
+            <p>
+                Visceral hypersensitivity refers to increased sensitivity
+                to sensations originating from internal organs. Signals
+                generated by stretching or distension of the
+                gastrointestinal tract may therefore be perceived as
+                more intense or unpleasant.
+            </p>
+
+            <p>
+                This could potentially help explain why gastrointestinal
+                distension produces significant nausea, pain or discomfort
+                in some people even when the volume involved is relatively
+                small.
+            </p>
+
+            <div class="mechanism-note">
+                <strong>An important distinction:</strong><br><br>
+                Visceral hypersensitivity is presented here as a possible
+                mechanism, not as an established cause of GI volume
+                intolerance. Other mechanisms and contributing factors
+                may also be relevant, and more research is needed.
             </div>
 
         </div>
     </section>
 
 
-    <section id="community">
-        <h2>You don't have to figure it out alone.</h2>
+    <!-- WHO MIGHT RELATE -->
+
+    <section class="section">
+        <div class="container">
+
+            <div class="eyebrow">Different starting points</div>
+
+            <h2>When the usual explanations don't quite fit</h2>
+
+            <p>
+                People experiencing this symptom pattern may arrive at
+                very different points in the diagnostic process.
+            </p>
+
+            <div class="two-column">
+
+                <div class="info-card">
+                    <h3>Investigations have not provided an answer</h3>
+
+                    <p>
+                        You may have undergone investigations for
+                        gastrointestinal conditions without finding an
+                        explanation that accounts for your symptoms.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>You already have a diagnosis</h3>
+
+                    <p>
+                        You may have an established diagnosis, but feel
+                        that it does not fully explain the severity or
+                        specific pattern of your symptoms.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="muted" style="margin-top: 35px;">
+                GI volume intolerance is not currently presented here as
+                an established medical diagnosis. This project explores
+                whether this pattern represents a clinically meaningful
+                phenomenon and what may help us understand it better.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- COMMUNITY -->
+
+    <section class="section" id="community">
+        <div class="container">
+
+            <div class="eyebrow">The project</div>
+
+            <h2>Why this community exists</h2>
+
+            <p class="community-intro">
+                I have met other people who seem to experience the same
+                pattern of symptoms: significant nausea, pain or
+                discomfort that appears closely related to the volume of
+                food or fluid in the gastrointestinal tract.
+            </p>
+
+            <p>
+                We may not have all the answers, and GI volume intolerance
+                is not currently an established medical diagnosis. But
+                that does not mean we have to wait for the medical
+                community to define the problem before we start learning
+                from one another.
+            </p>
+
+            <p class="question">
+                Why should every patient have to start from zero?
+                What if we shared what we know?
+            </p>
+
+            <p>
+                There is knowledge already scattered among patients:
+                experiences of what helps, what does not, which questions
+                to ask, which research is relevant, and how people manage
+                everyday life.
+            </p>
+
+            <p>
+                By bringing some of that knowledge together, we can make
+                the process a little less isolating and a little less
+                dependent on figuring everything out alone.
+            </p>
+
+            <div class="areas">
+
+                <div class="area">
+                    <strong>💬 Experiences</strong>
+                    <span>
+                        What living with this symptom pattern actually
+                        looks like.
+                    </span>
+                </div>
+
+                <div class="area">
+                    <strong>💊 Treatments & management</strong>
+                    <span>
+                        What people have tried and what they have learned.
+                    </span>
+                </div>
+
+                <div class="area">
+                    <strong>🔬 Research</strong>
+                    <span>
+                        Relevant scientific literature and emerging
+                        findings.
+                    </span>
+                </div>
+
+                <div class="area">
+                    <strong>📂 Resources</strong>
+                    <span>
+                        Useful information gathered in one place.
+                    </span>
+                </div>
+
+                <div class="area">
+                    <strong>🤝 Practical help</strong>
+                    <span>
+                        Things that can make healthcare, work, studying
+                        and daily life easier.
+                    </span>
+                </div>
+
+            </div>
+
+            <p class="closing">
+                You can contribute as much or as little as you like.
+                There is no expectation of a particular level of
+                involvement. If you want to actively contribute, I'd love
+                to have you on the team. If you simply want to learn from
+                others or occasionally share your experience, you're
+                equally welcome.
+            </p>
+
+            <p class="closing">
+                <strong>
+                    We may not have all the answers yet.
+                    But we can start finding them together.
+                </strong>
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+        <h2>Interested in being part of it?</h2>
 
         <p>
-            This community is for people who are trying to understand
-            symptoms that can be difficult to explain and even harder
-            to navigate alone.
+            I'm currently building the community and looking for people
+            who recognize this symptom pattern and want to contribute,
+            learn or simply connect with others who understand it.
         </p>
 
-        <br>
-
-        <a class="button"
-           href="https://www.instagram.com/"
-           target="_blank">
-            Join us on Instagram
+        <!-- Replace this URL with your Instagram profile -->
+        <a
+            class="button"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Connect with the community
         </a>
     </section>
 
@@ -240,8 +688,11 @@
 
 
 <footer>
-    <p>GI Volume Intolerance · A patient-led community and resource project</p>
+    <p>
+        GI Volume Intolerance · A patient-led project
+    </p>
 </footer>
 
 </body>
 </html>
+```
