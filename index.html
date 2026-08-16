@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +10,30 @@
     <meta name="description" content="A patient-led project exploring GI volume intolerance, gastrointestinal volume, visceral hypersensitivity, nausea, abdominal pain and related symptoms.">
 
     <style>
+
+        /* =========================
+           LIGHT MODE
+        ========================= */
+
         :root {
             --cream: #F8F6F2;
             --navy: #112B3B;
             --red: #942E1F;
             --olive: #6F732F;
+
             --light-border: #ddd8d1;
             --muted: #5d6870;
             --white: #ffffff;
+
+            --olive-soft: rgba(111, 115, 47, 0.09);
+            --red-soft: rgba(148, 46, 31, 0.06);
         }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -32,43 +47,12 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                 Roboto, Helvetica, Arial, sans-serif;
+
             background: var(--cream);
             color: var(--navy);
+
             line-height: 1.7;
         }
-
-        /* HEADER */
-
-        header {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 28px 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.05rem;
-            font-weight: 650;
-        }
-
-        nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        nav a {
-            color: var(--navy);
-            text-decoration: none;
-            font-size: 0.92rem;
-        }
-
-        nav a:hover {
-            color: var(--red);
-        }
-
-        /* GENERAL */
 
         .container {
             max-width: 900px;
@@ -106,15 +90,53 @@
         }
 
         .eyebrow {
-            color: var(--red);
+            color: var(--olive);
             font-size: 0.82rem;
-            font-weight: 650;
+            font-weight: 700;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             margin-bottom: 22px;
         }
 
-        /* HERO */
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 28px 35px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.05rem;
+            font-weight: 650;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.92rem;
+        }
+
+        nav a:hover {
+            color: var(--olive);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             padding: 120px 35px 115px;
@@ -134,7 +156,10 @@
             color: var(--muted);
         }
 
-        /* VOLUME EXPLANATION */
+
+        /* =========================
+           VOLUME EXPLANATION
+        ========================= */
 
         .intro {
             font-size: 1.15rem;
@@ -144,8 +169,9 @@
         .volume-question {
             margin: 45px 0;
             padding: 32px 35px;
-            border-left: 4px solid var(--red);
-            background: rgba(255, 255, 255, 0.45);
+
+            border-left: 4px solid var(--olive);
+            background: var(--olive-soft);
         }
 
         .volume-question p {
@@ -161,8 +187,11 @@
         .symptoms {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+
             gap: 14px 45px;
+
             margin: 30px 0 35px;
+
             list-style: none;
         }
 
@@ -173,11 +202,15 @@
 
         .symptoms li::before {
             content: "—";
-            color: var(--red);
+            color: var(--olive);
+            font-weight: bold;
             margin-right: 10px;
         }
 
-        /* MECHANISM */
+
+        /* =========================
+           MECHANISM
+        ========================= */
 
         .mechanism {
             background: var(--navy);
@@ -185,7 +218,7 @@
         }
 
         .mechanism .eyebrow {
-            color: #d9aaa2;
+            color: #aeb27a;
         }
 
         .mechanism p {
@@ -195,23 +228,37 @@
         .mechanism-note {
             margin-top: 35px;
             padding: 25px 28px;
-            border: 1px solid rgba(248, 246, 242, 0.25);
+
+            border: 1px solid rgba(174, 178, 122, 0.55);
+
+            background: rgba(111, 115, 47, 0.12);
+
             font-size: 0.95rem;
         }
 
-        /* DIFFERENT STARTING POINTS */
+
+        /* =========================
+           DIFFERENT STARTING POINTS
+        ========================= */
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             gap: 25px;
+
             margin-top: 35px;
         }
 
         .info-card {
             padding: 30px;
+
             background: var(--white);
+
             border: 1px solid var(--light-border);
+
+            border-top: 3px solid var(--olive);
+
             border-radius: 4px;
         }
 
@@ -225,7 +272,10 @@
             color: var(--muted);
         }
 
-        /* ABOUT ME */
+
+        /* =========================
+           ABOUT ME
+        ========================= */
 
         .about-me {
             max-width: 780px;
@@ -235,7 +285,20 @@
             font-size: 1.05rem;
         }
 
-        /* COMMUNITY */
+        .about-highlight {
+            margin-top: 35px;
+
+            padding: 25px 28px;
+
+            background: var(--olive-soft);
+
+            border-left: 4px solid var(--olive);
+        }
+
+
+        /* =========================
+           COMMUNITY
+        ========================= */
 
         .community-intro {
             font-size: 1.15rem;
@@ -245,19 +308,24 @@
         .question {
             font-size: 1.7rem;
             line-height: 1.4;
+
             margin: 45px 0 35px;
+
             font-weight: 550;
         }
 
         .areas {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+
             margin: 40px 0;
+
             border-top: 1px solid var(--light-border);
         }
 
         .area {
             padding: 24px 20px 24px 0;
+
             border-bottom: 1px solid var(--light-border);
         }
 
@@ -276,12 +344,19 @@
             font-size: 1.1rem;
         }
 
-        /* CONTACT */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             text-align: center;
+
             padding: 105px 35px;
+
             border-top: 1px solid var(--light-border);
+
+            background: var(--olive-soft);
         }
 
         .contact h2 {
@@ -290,27 +365,42 @@
 
         .contact p {
             max-width: 650px;
+
             margin: 0 auto 35px;
+
             color: var(--muted);
+
             font-size: 1.05rem;
         }
 
         .contact-links {
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
             gap: 12px;
         }
 
         .contact-link {
             display: inline-block;
+
             padding: 12px 22px;
+
             border: 1px solid var(--navy);
+
             color: var(--navy);
+
             text-decoration: none;
+
             border-radius: 3px;
+
             font-weight: 600;
+
             font-size: 0.95rem;
+
+            background: var(--cream);
         }
 
         .contact-link:hover {
@@ -320,7 +410,9 @@
 
         .contact-link.primary {
             background: var(--red);
+
             border-color: var(--red);
+
             color: white;
         }
 
@@ -328,29 +420,135 @@
             opacity: 0.88;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             border-top: 1px solid var(--light-border);
+
             padding: 35px;
+
             text-align: center;
+
             color: var(--muted);
+
             font-size: 0.85rem;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           DARK MODE
+           Follows device/browser
+           preference automatically
+        ========================= */
+
+        @media (prefers-color-scheme: dark) {
+
+            :root {
+                --cream: #101C24;
+                --navy: #F1EFEA;
+                --red: #C76A5B;
+                --olive: #A5A96A;
+
+                --light-border: #33414A;
+                --muted: #B5BEC3;
+                --white: #182830;
+
+                --olive-soft: rgba(165, 169, 106, 0.12);
+                --red-soft: rgba(199, 106, 91, 0.10);
+            }
+
+            body {
+                background: var(--cream);
+                color: var(--navy);
+            }
+
+            header {
+                border-bottom-color: var(--light-border);
+            }
+
+            nav a {
+                color: var(--navy);
+            }
+
+            .hero-lead {
+                color: var(--muted);
+            }
+
+            .volume-question {
+                background: var(--olive-soft);
+            }
+
+            .info-card {
+                background: var(--white);
+                border-color: var(--light-border);
+            }
+
+            .info-card p {
+                color: var(--muted);
+            }
+
+            .mechanism {
+                background: #0A151C;
+                color: #F1EFEA;
+            }
+
+            .mechanism p {
+                color: #D9DEE0;
+            }
+
+            .mechanism-note {
+                background: rgba(165, 169, 106, 0.10);
+                border-color: rgba(165, 169, 106, 0.45);
+            }
+
+            .contact {
+                background: var(--olive-soft);
+            }
+
+            .contact p {
+                color: var(--muted);
+            }
+
+            .contact-link {
+                background: var(--cream);
+                color: var(--navy);
+                border-color: var(--navy);
+            }
+
+            .contact-link:hover {
+                background: var(--navy);
+                color: var(--cream);
+            }
+
+            footer {
+                border-top-color: var(--light-border);
+                color: var(--muted);
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
             header {
                 padding: 22px;
+
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav {
                 gap: 18px;
+
                 flex-wrap: wrap;
+
                 justify-content: center;
             }
 
@@ -396,6 +594,7 @@
                 font-size: 1.4rem;
             }
         }
+
     </style>
 </head>
 
@@ -403,7 +602,10 @@
 <body>
 
 <header>
-    <div class="logo">GI Volume Intolerance</div>
+
+    <div class="logo">
+        GI Volume Intolerance
+    </div>
 
     <nav>
         <a href="#understanding">Understanding</a>
@@ -411,33 +613,46 @@
         <a href="#about">About</a>
         <a href="#community">Community</a>
     </nav>
+
 </header>
 
 
 <main>
 
+
     <!-- HERO -->
 
     <section class="hero">
-        <div class="eyebrow">A patient-led project</div>
 
-        <h1>GI Volume Intolerance</h1>
+        <div class="eyebrow">
+            A patient-led project
+        </div>
+
+        <h1>
+            GI Volume Intolerance
+        </h1>
 
         <p class="hero-lead">
             Exploring the relationship between gastrointestinal volume
             and symptoms such as nausea, abdominal pain and discomfort.
         </p>
+
     </section>
 
 
     <!-- UNDERSTANDING -->
 
     <section class="section" id="understanding">
+
         <div class="container">
 
-            <div class="eyebrow">Understanding the concept</div>
+            <div class="eyebrow">
+                Understanding the concept
+            </div>
 
-            <h2>What is GI volume intolerance?</h2>
+            <h2>
+                What is GI volume intolerance?
+            </h2>
 
             <p class="intro">
                 GI volume intolerance is a term used here to describe a
@@ -455,29 +670,37 @@
             </p>
 
             <ul class="symptoms">
+
                 <li>Nausea</li>
+
                 <li>Abdominal pain</li>
+
                 <li>Pressure or discomfort</li>
-                <li>Early satiety</li>
-                <li>Feeling excessively full after small amounts</li>
+
+                <li>Early satiety / feeling excessively full after small amounts</li>
+
                 <li>Other gastrointestinal symptoms</li>
+
             </ul>
 
             <p>
                 The important distinction is that symptoms may be
-                influenced not only by <span class="emphasis">what</span>
-                is consumed, but also by <span class="emphasis">how much
-                physical volume</span> is present in the gastrointestinal
-                tract.
+                influenced not only by
+                <span class="emphasis">what</span>
+                is consumed, but also by
+                <span class="emphasis">how much physical volume</span>
+                is present in the gastrointestinal tract.
             </p>
 
             <div class="volume-question">
+
                 <p>
                     What if the problem isn't primarily
                     <span class="emphasis">what</span> you eat —
-                    but <span class="emphasis">how much</span> physical
-                    volume enters your digestive system?
+                    but <span class="emphasis">how much</span>
+                    physical volume enters your digestive system?
                 </p>
+
             </div>
 
             <p>
@@ -488,17 +711,23 @@
             </p>
 
         </div>
+
     </section>
 
 
     <!-- MECHANISM -->
 
     <section class="section mechanism" id="mechanism">
+
         <div class="container">
 
-            <div class="eyebrow">Possible mechanisms</div>
+            <div class="eyebrow">
+                Possible mechanisms
+            </div>
 
-            <h2>Why might volume trigger symptoms?</h2>
+            <h2>
+                Why might volume trigger symptoms?
+            </h2>
 
             <p>
                 One possible mechanism that may contribute to an increased
@@ -522,25 +751,36 @@
             </p>
 
             <div class="mechanism-note">
-                <strong>An important distinction:</strong><br><br>
+
+                <strong>An important distinction:</strong>
+
+                <br><br>
+
                 Visceral hypersensitivity is presented here as a possible
                 mechanism, not as an established cause of GI volume
                 intolerance. Other mechanisms and contributing factors
                 may also be relevant, and more research is needed.
+
             </div>
 
         </div>
+
     </section>
 
 
     <!-- DIFFERENT STARTING POINTS -->
 
     <section class="section">
+
         <div class="container">
 
-            <div class="eyebrow">Different starting points</div>
+            <div class="eyebrow">
+                Different starting points
+            </div>
 
-            <h2>When the usual explanations don't quite fit</h2>
+            <h2>
+                When the usual explanations don't quite fit
+            </h2>
 
             <p>
                 People experiencing this symptom pattern may arrive at
@@ -550,46 +790,63 @@
             <div class="two-column">
 
                 <div class="info-card">
-                    <h3>Investigations have not provided an answer</h3>
+
+                    <h3>
+                        Investigations have not provided an answer
+                    </h3>
 
                     <p>
                         You may have undergone investigations for
                         gastrointestinal conditions without finding an
                         explanation that accounts for your symptoms.
                     </p>
+
                 </div>
 
+
                 <div class="info-card">
-                    <h3>You already have a diagnosis</h3>
+
+                    <h3>
+                        You already have a diagnosis
+                    </h3>
 
                     <p>
                         You may have an established diagnosis, but feel
                         that it does not fully explain the severity or
                         specific pattern of your symptoms.
                     </p>
+
                 </div>
 
             </div>
 
             <p class="muted" style="margin-top: 35px;">
+
                 GI volume intolerance is not currently presented here as
                 an established medical diagnosis. This project explores
                 whether this pattern represents a clinically meaningful
                 phenomenon and what may help us understand it better.
+
             </p>
 
         </div>
+
     </section>
 
 
     <!-- ABOUT ME -->
 
     <section class="section" id="about">
+
         <div class="container">
 
-            <div class="eyebrow">About the project</div>
+            <div class="eyebrow">
+                About the project
+            </div>
 
-            <h2>About me</h2>
+            <h2>
+                About me
+            </h2>
 
             <div class="about-me">
 
@@ -622,136 +879,198 @@
                     alone.
                 </p>
 
+                <div class="about-highlight">
+
+                    <strong>
+                        This is a patient-led project, not a substitute
+                        for professional medical advice.
+                    </strong>
+
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
 
     <!-- COMMUNITY -->
 
     <section class="section" id="community">
+
         <div class="container">
 
-            <div class="eyebrow">The community</div>
+            <div class="eyebrow">
+                The community
+            </div>
 
-            <h2>Why this community exists</h2>
+            <h2>
+                Why this community exists
+            </h2>
 
             <p class="community-intro">
+
                 I have met other people who seem to experience the same
                 pattern of symptoms: significant nausea, pain or
                 discomfort that appears closely related to the volume of
                 food or fluid in the gastrointestinal tract.
+
             </p>
 
             <p>
+
                 We may not have all the answers, and GI volume intolerance
                 is not currently an established medical diagnosis. But
                 that does not mean we have to wait for the medical
                 community to define the problem before we start learning
                 from one another.
+
             </p>
 
             <p class="question">
+
                 Why should every patient have to start from zero?
                 What if we shared what we know?
+
             </p>
 
             <p>
+
                 There is knowledge already scattered among patients:
                 experiences of what helps, what does not, which questions
                 to ask, which research is relevant, and how people manage
                 everyday life.
+
             </p>
 
             <p>
+
                 By bringing some of that knowledge together, we can make
                 the process a little less isolating and a little less
                 dependent on figuring everything out alone.
+
             </p>
+
 
             <div class="areas">
 
                 <div class="area">
+
                     <strong>💬 Experiences</strong>
+
                     <span>
                         What living with this symptom pattern actually
                         looks like.
                     </span>
+
                 </div>
 
+
                 <div class="area">
+
                     <strong>💊 Treatments & management</strong>
+
                     <span>
                         What people have tried and what they have learned.
                     </span>
+
                 </div>
 
+
                 <div class="area">
+
                     <strong>🔬 Research</strong>
+
                     <span>
                         Relevant scientific literature and emerging
                         findings.
                     </span>
+
                 </div>
 
+
                 <div class="area">
+
                     <strong>📂 Resources</strong>
+
                     <span>
                         Useful information gathered in one place.
                     </span>
+
                 </div>
 
+
                 <div class="area">
+
                     <strong>🤝 Practical help</strong>
+
                     <span>
                         Things that can make healthcare, work, studying
                         and daily life easier.
                     </span>
+
                 </div>
 
             </div>
 
+
             <p class="closing">
+
                 You can contribute as much or as little as you like.
                 There is no expectation of a particular level of
                 involvement. If you want to actively contribute, I'd love
                 to have you on the team. If you simply want to learn from
                 others or occasionally share your experience, you're
                 equally welcome.
+
             </p>
 
+
             <p class="closing">
+
                 <strong>
                     We may not have all the answers yet.
                     But we can start finding them together.
                 </strong>
+
             </p>
 
         </div>
+
     </section>
 
 
     <!-- CONTACT -->
 
     <section class="contact">
+
         <div class="container">
 
-            <div class="eyebrow">Get in touch</div>
+            <div class="eyebrow">
+                Get in touch
+            </div>
 
-            <h2>Does this sound familiar?</h2>
+            <h2>
+                Does this sound familiar?
+            </h2>
 
             <p>
+
                 If you recognize this symptom pattern in your own
                 experience, I'd genuinely love to hear from you.
+
             </p>
 
             <p>
+
                 Whether you want to share your experience, ask a
                 question, contribute to the project, or simply connect
                 with someone who understands, please feel free to reach
                 out.
+
             </p>
+
 
             <div class="contact-links">
 
@@ -762,6 +1081,7 @@
                     Email
                 </a>
 
+
                 <a
                     class="contact-link"
                     href="https://www.instagram.com/volumethreshold/"
@@ -771,6 +1091,7 @@
                     Instagram
                 </a>
 
+
                 <a
                     class="contact-link"
                     href="https://www.tiktok.com/@volumethreshold"
@@ -779,6 +1100,7 @@
                 >
                     TikTok
                 </a>
+
 
                 <a
                     class="contact-link"
@@ -792,16 +1114,20 @@
             </div>
 
         </div>
+
     </section>
 
 </main>
 
 
 <footer>
+
     <p>
         Volume Threshold · A patient-led project exploring GI volume intolerance
     </p>
+
 </footer>
+
 
 </body>
 </html>
